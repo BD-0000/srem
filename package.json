@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "express": "^4.19.2",
-    "webdav": "^5.7.1",
+    "webdav": "^4.11.3",
     "axios": "^1.7.7"
   }
 }
