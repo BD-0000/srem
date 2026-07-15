@@ -36,7 +36,6 @@ if (item.type === ‘file’) {
 const filenameLower = item.basename.toLowerCase();
 const searchTitleLower = searchTitle.toLowerCase();
 
-```
             if (filenameLower.includes(searchTitleLower) && (filenameLower.endsWith('.mp4') || filenameLower.endsWith('.mkv'))) {
                 return item;
             }
@@ -49,7 +48,6 @@ const searchTitleLower = searchTitle.toLowerCase();
     console.error(`Error searching directory ${directoryPath}:`, err.message);
 }
 return null;
-```
 
 }
 
@@ -135,7 +133,6 @@ button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(130,71,2
 <div class="footer">صنع بكل حب لتجربة مشاهدة مستقرة وحرة 🎬</div>
 </div>
 
-```
     <script>
         function getManifestUrl() {
             let webdavUrl = document.getElementById('webdav_url').value.trim();
@@ -182,7 +179,6 @@ button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(130,71,2
 </body>
 </html>
 `);
-```
 
 });
 
@@ -195,7 +191,6 @@ if (!config || !config.url || !config.user || !config.pass) {
 return res.status(400).json({ err: “بيانات الاعتماد غير صالحة” });
 }
 
-```
 const manifest = {
     id: "community.aseel.febbox.custom",
     version: "1.2.0",
@@ -207,7 +202,7 @@ const manifest = {
     catalogs: []
 };
 res.json(manifest);
-```
+
 
 });
 
@@ -218,7 +213,7 @@ app.get(’/:config/stream/:type/:id.json’, async (req, res) => {
 const { config: encodedConfig, type, id } = req.params;
 const config = decodeConfig(encodedConfig);
 
-```
+
 if (!config || !config.url || !config.user || !config.pass) {
     return res.json({ streams: [] });
 }
@@ -284,7 +279,7 @@ try {
     }
     res.json({ streams: [] });
 }
-```
+
 
 });
 
