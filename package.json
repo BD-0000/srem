@@ -3,6 +3,7 @@
   "version": "1.2.0",
   "description": "FebBox Stremio addon with WebDAV search",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node index.js"
   },
